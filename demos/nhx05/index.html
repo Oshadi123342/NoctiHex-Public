@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHX-05 | Misplaced Trust</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>NOCTI<span>HEX</span></h1>
+            <p class="eyebrow">NHX-05 // LINUX SECURITY</p>
+            <h2>Misplaced Trust</h2>
+            <p>
+                Investigate a fictional Linux backup server.
+                Examine permissions and discover a path-validation weakness.
+            </p>
+        </header>
+
+        <div class="notice">
+            Educational simulation — no real Linux commands are executed.
+        </div>
+
+        <section class="terminal">
+            <div class="terminal-header">
+                <div class="dots">
+                    <i></i><i></i><i></i>
+                </div>
+                <span>analyst@noctihex:~</span>
+            </div>
+
+            <div class="terminal-body" id="terminal-output">
+                <p>Welcome to NoctiHex Backup Server</p>
+                <p>Type 'help' to see available commands.</p>
+            </div>
+
+            <form id="terminal-form" autocomplete="off">
+                <label for="command">$</label>
+                <input
+                    id="command"
+                    type="text"
+                    placeholder="Enter a command..."
+                    spellcheck="false"
+                    aria-label="Terminal command"
+                >
+            </form>
+        </section>
+
+        <p class="footer-note">
+            This is a browser-based training demo, not a real shell.
+        </p>
+
+        <a class="back-link" href="../../index.html#challenges">
+            ← Back to Challenges
+        </a>
+    </main>
+</body>
+</html>

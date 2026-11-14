@@ -1,0 +1,393 @@
+
+/* NoctiHex Public — Main Styles */
+
+:root {
+  --bg: #080b14;
+  --surface: #101525;
+  --surface-hover: #171e33;
+  --text: #f0f3ff;
+  --muted: #a0a9c3;
+  --purple: #a855f7;
+  --cyan: #22d3ee;
+  --border: #293149;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 7%;
+  background: rgba(8, 11, 20, 0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span,
+.footer h2 span,
+h1 span,
+h2 span {
+  color: var(--purple);
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.navbar nav a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus-visible {
+  color: var(--cyan);
+}
+
+/* Hero */
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 7%;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 35%,
+      rgba(168, 85, 247, 0.17), transparent 55%),
+    radial-gradient(ellipse at 80% 80%,
+      rgba(34, 211, 238, 0.08), transparent 45%),
+    var(--bg);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: var(--cyan);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+}
+
+.hero-description,
+.section-description {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #9333ea, #6d28d9);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.55);
+}
+
+.btn-secondary {
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+/* Main Sections */
+
+.section {
+  padding: 100px 7%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 850px;
+  margin: 55px auto 0;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px 15px;
+}
+
+.stat h3 {
+  color: var(--cyan);
+  font-size: 2.7rem;
+}
+
+.stat p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Challenges */
+
+.challenges-section {
+  background: #0b0f1b;
+}
+
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1250px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    background 0.25s,
+    box-shadow 0.25s;
+}
+
+.challenge-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--purple);
+  background: var(--surface-hover);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.challenge-id {
+  color: var(--cyan);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.challenge-card h3 {
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.challenge-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.category {
+  color: var(--purple);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.points {
+  color: var(--cyan);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.status {
+  display: block;
+  margin-top: auto;
+  padding: 11px 14px;
+  border: 1px solid #3d3161;
+  border-radius: 8px;
+  color: #d9bbff;
+  background: #231936;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.status.locked {
+  color: #aeb7c9;
+  background: #1c2330;
+  border-color: #354052;
+}
+
+/* Footer */
+
+.footer {
+  padding: 60px 7%;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.footer h2 {
+  letter-spacing: 4px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: var(--muted);
+}
+
+.footer .copyright {
+  margin-top: 22px;
+  font-size: 0.8rem;
+}
+
+/* Accessibility */
+
+a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .challenge-card {
+    transition: none;
+  }
+}
+
+/* Mobile and Tablet */
+
+@media (max-width: 950px) {
+  .challenge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    padding: 16px 5%;
+  }
+
+  .navbar nav {
+    gap: 18px;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 80px 5%;
+  }
+
+  .section {
+    padding: 75px 5%;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-card {
+    padding: 24px;
+  }
+}
+
+/* Challenge Download Buttons */
+
+a.status {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+a.status:hover {
+  background: #6d28d9;
+  border-color: #a855f7;
+  color: #ffffff;
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.35);
+  transform: translateY(-2px);
+}
+
+a.status:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 4px;
+}

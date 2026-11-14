@@ -1,0 +1,215 @@
+
+/* NHX-05 — Misplaced Trust */
+
+:root {
+    --background: #080c18;
+    --panel: #111827;
+    --terminal: #060b13;
+    --border: #29334d;
+    --text: #edf1ff;
+    --muted: #a8b5d5;
+    --cyan: #22d3ee;
+    --purple: #9333ea;
+    --green: #4ade80;
+    --red: #fb7185;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: radial-gradient(
+        ellipse at top,
+        #17112d 0%,
+        var(--background) 65%
+    );
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.eyebrow,
+.challenge-id {
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.logo,
+.brand {
+    color: var(--text);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.logo span,
+.brand span {
+    color: var(--purple);
+}
+
+.terminal {
+    margin-top: 28px;
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.terminal h2 {
+    color: var(--cyan);
+}
+
+.terminal-screen,
+.output,
+#output {
+    padding: 20px;
+    min-height: 140px;
+    margin: 18px 0;
+    background: var(--terminal);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--green);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    color: var(--text);
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: #0b1020;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: 15px Consolas, monospace;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+}
+
+button {
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 9px;
+    background: linear-gradient(
+        120deg,
+        #a855f7,
+        #7e22ce
+    );
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+}
+
+.status {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #1e293b;
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.locked {
+    color: var(--red);
+}
+
+.status.success,
+.status.unlocked {
+    color: var(--green);
+}
+
+.status.error {
+    color: var(--red);
+}
+
+.footer-note {
+    margin-top: 25px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.back-link {
+    display: block;
+    margin-top: 24px;
+    color: #c084fc;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .terminal {
+        padding: 18px;
+    }
+
+    .terminal-screen,
+    .output,
+    #output {
+        padding: 14px;
+        font-size: 12px;
+    }
+}
